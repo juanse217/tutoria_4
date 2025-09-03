@@ -1,0 +1,19 @@
+17:15:38 [main] INFO  com.sebastian.service.Atm - Service layer started
+17:15:38 [main] INFO  com.sebastian.model.Account - Creating new account sebastian
+17:15:38 [main] INFO  com.sebastian.model.Account - Creating new account John
+17:15:38 [main] INFO  com.sebastian.model.Account - Creating new account Juan
+17:15:38 [main] INFO  com.sebastian.service.Atm - Creating new accunt
+17:15:38 [main] INFO  com.sebastian.service.Atm - Creating new accunt
+17:15:38 [main] INFO  com.sebastian.service.Atm - Creating new accunt
+17:15:38 [main] INFO  com.sebastian.service.Atm - Looking for account 1
+17:15:38 [main] INFO  com.sebastian.service.Atm - Result of account true
+17:15:38 [main] INFO  com.sebastian.service.Atm - Looking for account 2
+17:15:38 [main] INFO  com.sebastian.service.Atm - Result of account true
+17:15:38 [main] INFO  com.sebastian.service.Atm - Looking for account 4
+17:15:38 [main] INFO  com.sebastian.service.Atm - Result of account false
+17:15:38 [main] WARN  com.sebastian.Main - Account not found to add balance
+17:15:38 [main] INFO  com.sebastian.service.Atm - Looking for account 1
+17:15:38 [main] INFO  com.sebastian.service.Atm - Result of account true
+17:15:38 [main] INFO  com.sebastian.service.Atm - Looking for account 2
+17:15:38 [main] INFO  com.sebastian.service.Atm - Result of account true
+17:15:38 [main] INFO  com.sebastian.service.Atm - Not enough balance for 2

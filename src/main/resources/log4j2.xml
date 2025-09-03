@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN"> <!-- Es el nivel de log para el archivo de configuracion -->
+    <Appenders> <!--Los appenders son los encargados de enviar los logs a su destino, en este caso sera la consola-->
+        <Console name="Console" target="SYSTEM_OUT"><!-- En este caso la consola sera el destino -->
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/> <!-- El patron que vamos a usar para mostrar los logs, t es el thread que se esta ejecutando -->
+        </Console>
+
+        <File name="FileLogger" fileName="logs/app.log" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers> <!-- Los loggers son los encargados de recibir los logs y enviarlos a los appenders -->
+        <Root level="info"><!-- El nivel de log para el root del proyecto, a sea, es default para todo el sistema-->
+            <AppenderRef ref="Console"/> <!-- Se le indica al root que use el appender de la consola -->
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+
+    </Loggers>
+</Configuration>
