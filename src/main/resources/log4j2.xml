@@ -5,7 +5,7 @@
             <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/> <!-- El patron que vamos a usar para mostrar los logs, t es el thread que se esta ejecutando -->
         </Console>
 
-        <File name="FileLogger" fileName="logs/app.log" append="true">
+        <File name="FileLogger" fileName="logs/app.log" append="false">
             <PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>

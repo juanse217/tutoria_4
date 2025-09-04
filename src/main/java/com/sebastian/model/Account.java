@@ -1,16 +1,12 @@
 package com.sebastian.model;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
 
 public class Account {
     private String accountNumber; 
     private double balance; 
     private String ownerName;
-    private static Logger logger = (Logger) LogManager.getLogger(Account.class);
     
     public Account(String accountNumber, double balance, String ownerName) {
-        logger.info("Creating new account {}", ownerName );
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.ownerName = ownerName;
@@ -33,7 +29,7 @@ public class Account {
     }
 
     public boolean withdraw(double amount){
-        if(amount <= balance){
+        if(amount <= balance && amount > 0){
             balance -= amount;
             return true; 
         }
@@ -43,6 +39,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account [accountNumber=" + accountNumber + ", balance=" + balance + ", ownerName=" + ownerName + "]";
+        return "Account [accountNumber=" + accountNumber + ", balance=" + balance + "]";
     }
 }

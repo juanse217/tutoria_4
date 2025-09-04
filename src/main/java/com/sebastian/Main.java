@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 
 import com.sebastian.exceptions.AccountNotFoundException;
+import com.sebastian.exceptions.NotEnoughFundsException;
 import com.sebastian.model.Account;
 import com.sebastian.service.Atm;
 
@@ -42,12 +43,16 @@ public class Main {
             atm.withdraw("1", 40);
         } catch (AccountNotFoundException e) {
             logger.warn("Account not found to withdraw");
+        } catch(NotEnoughFundsException e){
+            logger.warn("Not enough balance account {}", acc1.getAccountNumber());
         }
 
         try {
             atm.withdraw("2", 100);
         } catch (AccountNotFoundException e) {
             logger.warn("Account not found to withdraw");
+        }catch(NotEnoughFundsException e){
+            logger.warn("Not enough balance account {}", acc2.getAccountNumber());
         }
         
     }
